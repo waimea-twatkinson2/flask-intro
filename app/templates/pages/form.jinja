@@ -1,0 +1,27 @@
+{% extends 'pages/base.jinja' %}
+{% block title %}
+    Flask Demo - Form
+{% endblock %}
+{% block content %}
+    <article>
+    <h2>The form of all forms</h2>
+    <form method="POST" action="{{ url_for('processForm') }}">
+        <fieldset>
+        <label>
+        Your name:
+            <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+        <label>
+        Your email:
+            <input type="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <label>
+        Your Age:
+            <input type="number" min="0" max="116" name="age" placeholder="Enter your Age" required>
+        </label>
+        
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+    </article>
+{% endblock %}
